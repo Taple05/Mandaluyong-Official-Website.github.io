@@ -1,0 +1,141 @@
+body{
+  height: 200vh;
+}
+
+
+
+.main-job-background{
+  background-image: url(/img/job-background.jpeg);
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: 65%;
+  min-width: 390px;
+}
+.job-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+.job-title :is(h2){
+  color: white;
+  font-size: 4rem;
+}
+
+.employment-division-container{
+  padding: 5em;
+  min-width: 390px;
+}
+.employment-division-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 60px;
+  min-width: 290px;
+}
+.employment-division-title > p {
+  line-height: 30px;
+  max-width: 65ch;
+}
+
+.search-job-container {
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+.search-box :is(input){
+  padding: 1em 8em;
+  text-align: center;
+}
+
+.form-container{
+  background-color: #ebfe16;
+}
+.form-title{
+  padding: 4em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.form-title :is(h2){
+  font-size: 1rem;
+}
+
+
+
+
+.form-container{
+  min-width: 390px;
+}
+
+
+.fill-out-form {
+  display: flex;
+  justify-content: center;
+  line-height: 40px;
+  color: black;
+  
+}
+.fill-out-form form input[type = 'text'], input[type="email"]{
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  width: 59%;
+  outline: none;
+  color: black;
+  padding: .5em 1em;
+  margin-left: 2em;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+.fill-out-form input[type="email"]{
+  margin-left: 1.2em;
+}
+
+.submit-button{
+  display: flex;
+  justify-content: center;
+  padding: 5em 0;
+}
+.submit-button :is(button){
+  padding: 1.2rem 4rem;
+  letter-spacing: 2px;
+  border: none;
+  background-color:  #29386d;
+  border-radius: 5px;
+  color: whitesmoke;
+}
+.submit-button :is(button):hover{
+  cursor: pointer;
+}
+
+form :is(#prefered){
+  margin-left: 1.3em;
+}
+
+
+
+
+
+@media (max-width: 400px){
+
+  .form-container{
+    padding: 2em;
+    
+  }
+  .form-container {
+    text-align: center;
+  } 
+  .fill-out-form form input[type = 'text'], input[type="email"]{
+    width: 65%;
+  }
+  .form-container :is(label){
+    padding-left: 3em;
+  }
+
+}

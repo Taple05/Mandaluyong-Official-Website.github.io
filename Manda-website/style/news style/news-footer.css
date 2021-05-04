@@ -1,0 +1,38 @@
+
+
+.footer-container{
+  margin-top: 5em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2em;
+  background-color: var(--nav-background);
+  color: white;
+  min-width: 500px;
+}
+a{
+  color: white;
+}
+.second-grid :where(li){
+  padding: .29em;
+}
+.third-grid :where(td){
+  margin-right: .5em;
+  padding: .29em;
+  border: 1px solid black;
+}
+
+@media(max-width: 647px){
+  .footer-container{
+    text-align: center;
+  }
+ .third-grid{
+    text-align: center;
+  }
+}
+
+@media(max-width: 390px){
+  .footer-container{
+    width: 380px;
+  }
+}

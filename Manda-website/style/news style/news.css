@@ -1,0 +1,163 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 200vh;
+}
+
+.news-background{
+  height: 42vh;
+  background-image: url(/img/news-menchie.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 10%;
+  min-width: 510px;
+}
+
+.news-title-background{
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news-title-background :is(h2){
+  font-size: 4rem;
+  color: black;
+}
+
+
+.main-news-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: 2em;
+  margin: 3em 3em 0 3em;
+}
+
+.local-news-container{
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+.local-news-container :is(h2){
+  font-size: 2rem;
+}
+
+
+.top-news-container :is(h3){
+  color: red;
+}
+.top-news-container :is(p) {
+  color: black;
+  
+}
+.top-news-container div :is(a){
+  text-decoration: underline black;
+}
+.top-news-container div :is(p){
+  padding-top: .3em;
+}
+.top-news-container :is(time){
+  opacity: 60%;
+}
+
+
+
+.sub-articles > div{
+  background-color: rgb(240, 237, 237);
+  padding: 1.15em;
+}  
+
+
+.national-news-container{
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+.national-news-container :is(h2){
+  font-size: 2rem;
+}
+
+.articles-container div :is(a, p){
+  color: black;
+}
+.articles-container div :is(h3){
+  color: red;
+}
+.articles-container div :is(a){
+ text-decoration: underline;
+}
+.articles-container div :is(p){
+  padding-top: .6em;
+}
+.articles-container div :is(time){
+  opacity: 60%;
+}
+
+
+.covid-19{
+  margin-top: 6em;
+  
+}
+
+.covid-news-title {
+  display: flex;
+  justify-content: center;
+  padding: 4em; 
+  min-width: 500px;
+}
+.covid-news-title :is(h3){
+  font-size: 2rem;
+}
+
+.covid-news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  align-items: center;
+  padding: 2em;
+  margin-left: 5%;
+}
+
+
+.health-info{
+  padding: 2em;
+  background-color: rgb(243, 242, 242);
+  
+}
+.health-info ul li {
+  text-indent: 2em;
+}
+.health-info :is(h3){
+  padding-bottom: 1.2em;
+  color: red;
+  font-size: 1.8rem;
+}
+.health-info :is(h5){
+  font-size: 1.2rem;
+  padding-bottom: 1.2em;
+} 
+
+.health-info :is(p){
+  padding-bottom: 1em;
+
+}
+
+
+
+
+ 
+@media (max-width: 400px){
+    .covid-news-container{
+      text-align: center;
+    }
+    .covid-news-title{
+      text-align: center;
+      margin-left: 2em;
+    }
+    .chart{
+      
+      margin-left: -3em;
+    }
+
+}

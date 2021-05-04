@@ -1,0 +1,74 @@
+.featured-title{
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+  font-size: 1.5rem;
+}
+
+.featured-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows:repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1em;
+  padding: 2em;
+}
+
+video{
+  width: 100%;
+  height: auto;
+}
+
+.featured-left-container{
+  min-width: 200px;
+}
+
+.featured-right-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+
+
+.news-see-all{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2.2em;
+}
+.news-see-all a{
+  color: black;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+.news-see-all a:hover{
+ border-bottom: none;
+}
+
+.mayor-info{
+  margin-top: 10em;
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 530px){
+  .featured-title{
+    text-align: center;
+  }
+  .news-see-all{
+    justify-content: center;
+    margin-left: 7em;
+  }
+  
+}
+
+@media(max-width: 360px){
+  .featured-title{
+   width: 380px;
+  }
+}

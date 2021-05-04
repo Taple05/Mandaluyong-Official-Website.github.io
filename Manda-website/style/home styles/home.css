@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+:root{
+  --nav-background: #29386D;
+  --button: #EBFE16;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  /* height: 400vh; */
+  scroll-behavior: smooth;
+}
+
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+img{
+  max-width: 100%;
+}
+
+.nav-container{
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-template-columns: repeat(3, 1fr); 
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: var(--nav-background);
+  color: white;
+  gap: 1rem;
+  min-width: 390px;
+  width: 100%;
+  z-index: 9999;
+}
+
+.nav-logo{
+  display: flex;
+  flex-shrink: 0;
+  flex-grow: 0;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 1.2em;
+  gap: .8em;
+ 
+}
+.nav-logo :is(.img-logo){
+  max-width: 15%;
+  min-width: 60px;
+}
+.nav-logo :is(h5){
+  letter-spacing: 1px;
+}
+
+
+.nav-menu :is(ul){
+  display: flex;
+  gap: 2em;
+  text-align: center;
+}
+.nav-menu :is(a){
+  font-size: .8rem;
+  letter-spacing: 1px;
+}
+
+
+.nav-covid{
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-covid :is(button){
+
+  padding: 1rem 1.3rem;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--button);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.10);
+  cursor: pointer;
+}
+
+
+
+/* Main landing page */
+
+.city-background{
+  background-image: url(/img/city-hall-background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: auto;
+  min-width: 390px;
+}
+
+main :where(.content){
+  margin-left: 2.5rem;    
+}
+
+main :where(.content){
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  color: whitesmoke;
+  min-width: 200px;
+}
+main :where(h2){
+  font-size: clamp(10px, 2rem, 3rem);
+  line-height: 50px;
+  padding-bottom: .89rem;
+  letter-spacing: 3px;
+  color: black;
+  
+}
+main :where(p){
+  max-width:55ch;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+main :where(button){
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--button);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.10);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.content-fmore :is(button){
+  cursor: pointer;
+}
+
+
+
+
+
+@media (max-width: 1019px){
+  .nav-container{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .nav-covid{
+    display: none;
+  }
+
+}
+
+@media (max-width: 745px){
+  .nav-container{
+    grid-template-columns: repeat(1, 1fr); 
+
+  }
+  .nav-covid{
+    display: none;
+  }
+  /* .nav-menu{
+    display: none;
+  } */
+
+}
+
+
+@media (max-width: 360px) {
+  .content{
+    text-align: center;
+  }
+  .content-p :where(p){
+    display: none;
+  }
+
+  main :where(button){
+    margin: 0;
+  }
+}

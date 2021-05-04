@@ -1,0 +1,71 @@
+.mayor-title{
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+  
+}
+.mayor-title :where(h2){
+  font-size: clamp(1rem, 2.3rem, 3rem);
+}
+
+
+.mayor-container{
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2em;
+  padding: 2rem;
+
+}
+
+.left-container{
+  text-align: center;
+  
+}
+.left-container :where(p){
+  margin-top: 1rem;
+  text-align: justify;
+  line-height: 35px;
+  
+}
+.left-container :where(.mayor-button){
+  margin-top: 2rem;
+}
+.mayor-button :where(button){
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--nav-background);
+  color: white;
+  letter-spacing: 2px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+.mayor-button :where(button):hover{
+  cursor: pointer;
+}
+
+
+.right-background{
+  background-image: url('/img/menchie-abalos.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: -10%;
+  height: 75vh;
+}
+
+
+@media (max-width: 420px){
+  .mayor-title{
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 330px){
+  .mayor-title{
+   width: 380px;
+  }
+}

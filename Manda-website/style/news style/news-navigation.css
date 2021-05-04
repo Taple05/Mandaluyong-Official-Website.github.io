@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+:root{
+  --nav-background: #29386D;
+  --button: #EBFE16;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  /* height: 400vh; */
+  scroll-behavior: smooth;
+}
+
+
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+img{
+  max-width: 100%;
+}
+
+.nav-container{
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: var(--nav-background);
+  color: white;
+  gap: 2rem;
+  min-width: 510px;
+}
+
+.nav-logo{
+  display: flex;
+  flex-shrink: 0;
+  flex-grow: 0;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 1.2em;
+  gap: .8em;
+ 
+}
+.nav-logo :is(.img-logo){
+  max-width: 15%;
+  min-width: 60px;
+}
+.nav-logo :is(h5){
+  letter-spacing: 1px;
+}
+
+
+.nav-menu :is(ul){
+  display: flex;
+  gap: 2em;
+  text-align: center;
+  margin-left: 4em;
+}
+.nav-menu :is(a){
+  font-size: .8rem;
+  letter-spacing: 1px;
+  padding-bottom: .6em;
+}
+.nav-menu :is(a):hover{
+ border-bottom: 2px solid var(--button);
+}
+
+
+.nav-covid{
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-covid :is(button){
+
+  padding: 1rem 1.3rem;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--button);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.10);
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1019px){
+ 
+  .nav-covid{
+    display: none;
+  }
+
+}
+
+@media (max-width: 745px){
+  .nav-container{
+    
+  }
+  .nav-covid{
+    display: none;
+  }
+  /* .nav-menu{
+    display: none;
+  } */
+  .nav-logo{
+    display: none;
+  }
+  .nav-menu{
+    margin-left: 5em;
+    padding: 1em;
+  }
+  .nav-menu :is(ul){
+    margin-left: 0;
+  }
+}
+
+
+@media (max-width: 360px) {
+  .content{
+    text-align: center;
+  }
+  .content-p :where(p){
+    display: none;
+  }
+
+  main :where(button){
+    margin: 0;
+  }
+}

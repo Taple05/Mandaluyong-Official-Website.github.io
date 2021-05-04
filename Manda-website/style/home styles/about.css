@@ -1,0 +1,124 @@
+section :where(.about-title){
+ display: flex;
+ justify-content: center;
+ padding: 1.5em;
+ font-size: 2rem;
+ margin-top: 2em;
+} 
+section :where(.about-container){
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr);
+  padding: 2em;
+ 
+}
+section :where(.about-header){
+  background-color: var( --nav-background);
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 2em;
+  color: white;
+  letter-spacing: 2px;
+}
+section :where(.about-p){
+  background-color: whitesmoke;
+  padding: 2em;
+}
+section :where(.about-view-all){
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+}
+section :where(a){
+  color: black;
+  text-decoration: none;
+}
+section :where(a):hover{
+  border-bottom: 2px solid;
+}
+
+
+
+
+.city-aims-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding: 2em;
+  gap: 1em;
+}
+.city-aims-container > div{
+  background-color: whitesmoke;
+  text-align: center;
+  line-height: 30px;
+}
+
+.about-view-all :where(a){
+  color: black;
+}
+
+.mission :where(.mission-header){
+  background-color: var(--nav-background);
+  padding: 2em;
+  color: white;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+.mission :where(p){
+  text-align: left;
+  padding: 1em 2em;
+}
+.mission :where(.mission-view-all){
+  padding: 1em;
+}
+
+.mission-view-all :where(a){
+  color: black;
+}
+
+.vission :where(.vission-header){
+  background-color: var(--nav-background);
+  padding: 2em;
+  color: white;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+
+.vission :where(p){
+  text-align: left;
+  padding: 1em 2em;
+}
+.vission :where(.vission-view-all){
+  padding: 1em;
+}
+.vission-view-all :where(a){
+  color: black;
+}
+
+.objectives :where(.objectives-header){
+  background-color: var(--nav-background);
+  padding: 2em;
+  color: white;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+
+.objectives :where(p){
+  text-align: left;
+  padding: 1em 2em;
+
+}
+.objectives :where(.objectives-view-all){
+  padding: 1em;
+}
+.objectives-view-all :where(a){
+  color: black;
+}
+
+
+@media (max-width: 350px){
+  .about-title{
+    text-align: center;
+    width: 360px;
+  }
+}
